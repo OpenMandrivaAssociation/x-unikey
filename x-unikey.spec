@@ -12,7 +12,7 @@ Source: http://prdownloads.sourceforge.net/unikey/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-buildroot
 License: GPL
 Requires: locales-vi
-BuildRequires:	XFree86-devel
+BuildRequires:	X11-devel
 
 %description
 X-Unikey is Unikey ported to Linux and FreeBSD.
