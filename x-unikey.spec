@@ -1,6 +1,6 @@
 %define name x-unikey
 %define version 1.0.4
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name: %{name}
 Summary: A Vietnamese keyboard input for X-Window
