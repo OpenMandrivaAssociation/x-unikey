@@ -7,6 +7,7 @@ URL:		http://unikey.sourceforge.net/linux.php
 Source0:	http://downloads.sourceforge.net/unikey/%{name}-%{version}.tar.bz2
 # Fix build with GCC 4.3 (missing include) - AdamW 2008/12
 Patch0:		x-unikey-1.0.4-gcc43.patch
+Patch1:		x-unikey-1.0.4-gcc44.patch
 Buildroot:	%{_tmppath}/%{name}-buildroot
 License:	LGPLv2+
 Requires:	locales-vi
@@ -24,10 +25,11 @@ keyboard shortcuts.
 %prep
 %setup -q
 %patch0 -p1 -b .gcc43
+%patch1 -p1 -b .gcc44
 
 %build
 #configure --with-unikey-gtk (default: excluded)
-CFLAGS="%{optflags} -fPIC" %configure 
+CFLAGS="%{optflags} -fPIC" %configure2_5x
 # (tv) fix build:
 ln -fs /bin/true src/xim/install.sh
 %make 
