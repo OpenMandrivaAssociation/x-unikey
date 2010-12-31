@@ -11,7 +11,7 @@ Patch1:		x-unikey-1.0.4-gcc44.patch
 Buildroot:	%{_tmppath}/%{name}-buildroot
 License:	LGPLv2+
 Requires:	locales-vi
-BuildRequires:	X11-devel
+BuildRequires:	libx11-devel
 
 %description
 X-Unikey is Unikey ported to Linux and FreeBSD.
@@ -29,7 +29,8 @@ keyboard shortcuts.
 
 %build
 #configure --with-unikey-gtk (default: excluded)
-CFLAGS="%{optflags} -fPIC" %configure2_5x
+export CFLAGS="%{optflags} -fPIC"
+%configure2_5x
 # (tv) fix build:
 ln -fs /bin/true src/xim/install.sh
 %make 
