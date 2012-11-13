@@ -1,0 +1,34 @@
+Index: x-unikey-1.0.4/src/ukengine/mactab.cpp
+===================================================================
+--- x-unikey-1.0.4/src/ukengine/mactab.cpp
++++ x-unikey-1.0.4/src/ukengine/mactab.cpp	2009-08-24 12:49:55.000000000 +0200
+@@ -287,7 +287,7 @@
+   char key[MAX_MACRO_KEY_LEN];
+   
+   // Parse the input item
+-  char * pos = strchr(item, ':');
++  const char * pos = strchr(item, ':');
+   if (pos == NULL)
+     return -1;
+   int keyLen = (int)(pos - item);
+@@ -295,7 +295,7 @@
+     keyLen = MAX_MACRO_KEY_LEN-1;
+   strncpy(key, item, keyLen);
+   key[keyLen] = '\0';
+-  return addItem(key, ++pos, charset);
++  return addItem(key, pos+1, charset);
+ }
+ 
+ //---------------------------------------------------------------
+Index: x-unikey-1.0.4/src/ukengine/usrkeymap.cpp
+===================================================================
+--- x-unikey-1.0.4/src/ukengine/usrkeymap.cpp
++++ x-unikey-1.0.4/src/ukengine/usrkeymap.cpp	2009-08-24 12:50:54.000000000 +0200
+@@ -23,6 +23,7 @@
+ 
+ #include "stdafx.h"
+ #include <iostream>
++#include <cstdio>
+ #include <cstring>
+ using namespace std;
+ 
