@@ -1,14 +1,13 @@
 Name:		x-unikey
 Summary:	A Vietnamese keyboard input system
 Version:	1.0.4
-Release:	%mkrel 6
+Release:	7
 Group:		System/Internationalization
 URL:		http://unikey.sourceforge.net/linux.php
 Source0:	http://downloads.sourceforge.net/unikey/%{name}-%{version}.tar.bz2
 # Fix build with GCC 4.3 (missing include) - AdamW 2008/12
 Patch0:		x-unikey-1.0.4-gcc43.patch
 Patch1:		x-unikey-1.0.4-gcc44.patch
-Buildroot:	%{_tmppath}/%{name}-buildroot
 License:	LGPLv2+
 Requires:	locales-vi
 BuildRequires:	pkgconfig(x11)
