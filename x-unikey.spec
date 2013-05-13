@@ -11,7 +11,7 @@ Patch1:		x-unikey-1.0.4-gcc44.patch
 Buildroot:	%{_tmppath}/%{name}-buildroot
 License:	LGPLv2+
 Requires:	locales-vi
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(x11)
 
 %description
 X-Unikey is Unikey ported to Linux and FreeBSD.
