@@ -1,7 +1,7 @@
 Name:		x-unikey
 Summary:	A Vietnamese keyboard input system
 Version:	1.0.4
-Release:	10
+Release:	11
 Group:		System/Internationalization
 URL:		http://unikey.sourceforge.net/linux.php
 Source0:	http://downloads.sourceforge.net/unikey/%{name}-%{version}.tar.bz2
