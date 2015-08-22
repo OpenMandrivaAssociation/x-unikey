@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Name:		x-unikey
 Summary:	A Vietnamese keyboard input system
 Version:	1.0.4
