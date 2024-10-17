@@ -5,7 +5,7 @@ Summary:	A Vietnamese keyboard input system
 Version:	1.0.4
 Release:	16
 Group:		System/Internationalization
-URL:		http://unikey.sourceforge.net/linux.php
+URL:		https://unikey.sourceforge.net/linux.php
 Source0:	http://downloads.sourceforge.net/unikey/%{name}-%{version}.tar.bz2
 # Fix build with GCC 4.3 (missing include) - AdamW 2008/12
 Patch0:		x-unikey-1.0.4-gcc43.patch
